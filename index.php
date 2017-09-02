@@ -1,3 +1,3 @@
 <?php
 echo "hello world";
-print_f($_ENV);
+print_r($_ENV);
