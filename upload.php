@@ -30,7 +30,7 @@ if ($_FILES["file"]["error"] > 0)
 else
 {
     $src = $_FILES["file"]["tmp_name"];
-    echo $src;
+    $dst .= $_POST['name'];
     $ret = $cosApi->upload($bucket, $src, $dst);
     var_dump($ret);
 }
