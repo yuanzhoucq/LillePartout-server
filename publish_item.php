@@ -8,8 +8,8 @@ $des = $_GET['des'];
 
 $sql = "INSERT INTO `sellitems`( `userId`, `name`, `price`, `description`) VALUES ('$openid', '$name', '$price', '$des');";
 $res = mysqli_query($link, $sql);
-echo mysqli_errno($link);
-mysqli_close($link);
 if($res) {
-    echo 'ok';
+    $sql = "SELECT `id` FROM `sellitems` WHERE `userId`='$openid' AND `name`='$name' AND `price`='$price' AND `description`='$des';";
+    $res = mysqli_query($link, $sql)->fetch_array();
+    echo json_encode($res);
 }
