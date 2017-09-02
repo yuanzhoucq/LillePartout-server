@@ -1,5 +1,6 @@
 <?php
 require('./sql.php');
+echo mysqli_get_host_info($link);
 
 $name = $_GET['name'];
 $price = $_GET['price'];
