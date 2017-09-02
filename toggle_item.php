@@ -1,8 +1,20 @@
 <?php
 require('./sql.php');
 $id = $_GET['id'];
-$id = '26';
+
 $sql = "SELECT `sold` FROM `sellitems` WHERE `id`='$id'";
 $res = mysqli_query($link, $sql)->fetch_assoc();
 
-echo json_encode($res);
+if($res['sold']=='0') {
+    $newState = '1';
+}
+else {
+    $newState = '0';
+}
+
+$sql = "UPDATE `sellitems` SET `sold` = '$newState' WHERE `sellitems`.`id` = '$id';";
+$res = mysqli_query($link, $sql);
+
+if($res) {
+    echo 'ok';
+}
