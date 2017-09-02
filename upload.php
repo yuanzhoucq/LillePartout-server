@@ -4,9 +4,7 @@ require('./include.php');
 use QCloud\Cos\Api;
 
 $bucket = 'lillepartout';
-$src = './hello.txt';
-$dst = '/testfolder/hello.txt';
-$folder = '/testfolder';
+$dst = '/';
 
 $app_id = getenv(APPSETTING_APPID);
 $secret_id = getenv(APPSETTING_SECRETID);
@@ -24,3 +22,14 @@ $config = array(
 
 date_default_timezone_set('PRC');
 $cosApi = new Api($config);
+
+if ($_FILES["file"]["error"] > 0)
+{
+    echo "Error: " . $_FILES["file"]["error"] . "<br />";
+}
+else
+{
+    $src = $_FILES["file"]["tmp_name"];
+    $ret = $cosApi->upload($bucket, $src, $dst);
+    var_dump($ret);
+}
