@@ -1,4 +1,3 @@
 <?php
 echo "hello world";
-print_r(json_encode($_ENV));
-echo phpinfo();
+echo getenv('APPSETTING_TEST');
