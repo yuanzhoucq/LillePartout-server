@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: zhouyuan
- * Date: 02/09/2017
- * Time: 4:00 PM
- */
 
 $connectstr_dbhost = '';
 $connectstr_dbname = '';
