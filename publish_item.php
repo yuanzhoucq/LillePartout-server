@@ -1,4 +1,4 @@
 <?php
 require('./sql.php');
 
-echo $_GET['name'];
+echo var_dump($_GET);
