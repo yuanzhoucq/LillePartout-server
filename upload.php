@@ -31,9 +31,6 @@ else
 {
     $src = $_FILES["file"]["tmp_name"];
     $dst .= $_POST['name'];
-    echo $dst;
-    echo '--';
-    echo $src;
     $ret = $cosApi->upload($bucket, $src, $dst);
     var_dump($ret);
 }
