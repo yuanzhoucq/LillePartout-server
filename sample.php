@@ -4,7 +4,7 @@ require('./include.php');
 
 use QCloud\Cos\Api;
 
-$bucket = 'testbucket';
+$bucket = 'lillepartout';
 $src = './hello.txt';
 $dst = '/testfolder/hello.txt';
 $dst2 = 'hello2.txt';
