@@ -15,7 +15,7 @@ $config = array(
     'app_id' => $app_id,
     'secret_id' => $secret_id,
     'secret_key' => $secret_key,
-    'region' => 'sgp',   // bucket所属地域：华北 'tj' 华东 'sh' 华南 'gz'
+    'region' => 'sh',   // bucket所属地域：华北 'tj' 华东 'sh' 华南 'gz'
     'timeout' => 60
 );
 
