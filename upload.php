@@ -3,7 +3,7 @@ require('./include.php');
 
 use QCloud\Cos\Api;
 
-$bucket = 'lillepartout';
+$bucket = 'slf';
 $dst = '/';
 
 $app_id = getenv(APPSETTING_APPID);
